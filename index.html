@@ -33,9 +33,9 @@
 							<ul>
 								<li><a href="#intro">Intro</a></li>
 								<li><a href="#demo">Demo</a></li>
+								<li><a href="#paperlist">Paper List</a></li>
 								<li><a href="#contributor">Contributor</a></li>
 								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
 					</header>
@@ -46,24 +46,44 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<h3>Find your data easily</h3>
-								<p>You can find the data you want easily from dataset with huge amount of data.</p>
-								<h3>Select the examples</h3>
-								<p>You can choose the data examples provided by our system to illustrate your interest.</p>
-								<h3>Enjoy exploration with VR environment</h3>
-								<p>Our system provides you with an immersive explore experience in a Sci fi game scenes, based on VR device.</p>
-								<h3>The system is under developing</h3>
-								<p>We are developing the system, which will be released soon.</p>
+								
+								<h3>What is IDE</h3>
+								<p>Interactive Data Exploration (IDE) relies on system assistance and interactive guidance to extract data ranges of interest to users from the database without the clear specification of queries. The IDE's problem is challenging due to the two-fold nature of the user's data interests: 1) User interest is intangible and thus requires incremental refinement/exploration; 2) User interest is indescribable because it is often too complex to be expressed by the user through traditional query languages (e.g., SQL). A typical Explore-by-Example paradigm of IDE views the exploration process as an iterative training process for the classifiers. Users only need to iteratively determine whether the database tuples are "interesting" so that the classifiers can infer the interesting data region after being trained on the labelled tuples.</p>
+								<h3>An Example of IDE</h3>
+								<span class="image main"><img src="images/Example.png" alt="" /></span>
+								<p>A reader wants to find a book of interest in the library. However, his interest is so uncertain that it is hard
+								for him to express it accurately. Meanwhile, he cannot use complex information retrieval tools like SQL or filters.
+								Alternatively, it is easy for him to communicate with an IDE assistant, which probes and explores his query interests by offering a few samples for him to label, and takes the feedback for recommending quality data samples and refining his query interests iteratively. There is an IDE assistant on the library's navigation website. The assistant repeatedly recommended some books to the reader and constantly located his interest according to his feedback. During this process, readers can choose to stop or continue the interactions with the assistant.</p>
+								<h3>Our Work</h3>
+								<span class="image main"><img src="images/InitLabelling.png" alt="" /></span>
+								<p>As a technique for human-computer interaction, IDE needs to provide users with an interactive interface. So far, existing interactive system prototypes work as a backend platforms, which are mostly on the server side. These systems, however, lack of user interactivity research and data representation design, which makes it difficult for users to understand the data.</p>
+								<p>Virtual reality(VR) technology can simulate user's physical presence in a virtual environment, allow user to immersively interact with virtual objects. By turning abstract data into virtual entities in VR scenes, user can understand data intuitively.
+								In this work, we combined IDE with VR technology and proposed a virtual reality interactive system on data exploration, called VR-Explorer. We implemented the specific exploration procedure of user interaction according to the workflow of IDE, and designed user-friendly virtual interfaces incorporating human-computer interactions. Finally, we conducted a study on the car database and demonstrated that the VR-Explorer is of good functionality and usability for public users.</p>
 							</article>
 
 						<!-- Demo -->
 							<article id="demo">
 								<h2 class="major">Demo</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<h3>Test our system</h3>
-								<p>You can take a look on our system demo here.</p>
-								<p></p><li><a href="http://120.76.141.20/WebGL/">Demo Link</a></li></p>
+								<h3>An Exploration on Car Dataset</h3>
+								<p>We describe the interaction procedure of our demo system through an case of car dataset exploration.</p>
+								<h4>Selecting a dataset to explore</h4>
+								<span class="image main"><img src="images/SelectDataset.png" alt="" /></span>
+								<p>The system has loaded multiple datasets, and you can select one to start the exploration.</p>
+								<h4>Selecting the attributes of interest</h4>
+								<span class="image main"><img src="images/AttributeSelection.png" alt="" /></span>
+								<p>The attributes of the dataset are displayed on the virtual scene. You should pick the attributes that you care about.</p>
+								<h4>Grouping the selected attributes</h4>
+								<span class="image main"><img src="images/AttributeGroup.png" alt="" /></span>
+								<p>To avoid considering all the selected attributes at once, you can divide the selected attributes into groups according to your knowledge of the relations of the attributes.</p>
+								<h4>Initial labelling a batch of samples</h4>
+								<span class="image main"><img src="images/InitLabelling.png" alt="" /></span>
+								<p>There is a batch of insightful samples represented as virtual entities in the scene, which are the tuples extracted from the dataset. You can interact with virtual entities through gesture-based manipulations. By manipulating the VR controllers, you can move, rotate, or scale the entities and observe the features of the samples from various directions and levels. And you can click the "Like" button with green color to indicate that this sample is of interest to you, or click the "Dislike" button with red color.</p>
+								<h4>Iteratively labelling the provided samples</h4>
+								<span class="image main"><img src="images/IterativeLabelling.png" alt="" /></span>
+								<p>The system iteratively provides updated samples to you, and asks for your labelling feedback to gradually grasp your interest. You can click the "End" button to terminate the labelling if you think the values of samples meet your interest.</p>
+								<h4>Observing the result of data interest</h4>
+								<span class="image main"><img src="images/FinalResult.png" alt="" /></span>
+								<p>You can browse the data recommended by the system as the result of the data exploration.</p>
 								
 							</article>
 
@@ -72,10 +92,21 @@
 								<h2 class="major">Contributor</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<h3>Our Team</h3>
-								<p>Haoyun Li</p>
-								<p>Yukun Cao</p>
+								<p>
+								<li>Li Haoyun</li>
+								<li>Cao Yukun</li>
+								</p>
 								<h3>Supervisor</h3>
-								<p>Xike Xie</p>
+								<p>
+								<li>Xike Xie</li>
+							</article>
+						
+						<!-- Paper List -->
+							<article id="paperlist">
+								<h2 class="major">Paper List</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p></p><li><a href="papers/ICDE_CR.pdf">Learn to Explore: on Bootstrapping Interactive Data Exploration with Meta-learning. Yukun Cao, Xike Xie, and Kexin Huang. ICDE 2023 (CCF A)</a></li>
+								<p></p><li><a href="papers/VR-Explorer.pdf">VR-Explorer: A Demonstration of a Virtual Reality Interactive Data Exploration System. Li Haoyun, Cao Yukun, Xike Xie. Group 2022 (CCF B)</a></li>
 							</article>
 
 						<!-- Contact -->
@@ -93,7 +124,7 @@
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="message" id="message" rows="5"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
